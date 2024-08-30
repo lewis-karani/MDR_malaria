@@ -37,6 +37,10 @@ for SAMPLE in KKGR03 KKGR06 KKGR12 KKGR15 KKGR25 KKGR26 KKGR27 Reference; do
   samtools index ${OUTPUT_PREFIX}_sorted.bam
 
   # Step 6: Call variants focusing on the specified regions using GATK HaplotypeCaller
+  gatk CreateSequenceDictionary \
+    -R /mnt/d/Design_beds/MDR-MALARIA/Plasmodium_falciparum_reference.fasta \
+    -O /mnt/d/Design_beds/MDR-MALARIA/Plasmodium_falciparum_reference.dict
+
   gatk HaplotypeCaller \
       -R $REF_FASTA \
       -I ${OUTPUT_PREFIX}_sorted.bam \
