@@ -1,0 +1,18 @@
+name: malaria-mdr
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - trimmomatic
+  - fastqc
+  - gatk4
+  - minimap2
+  - ivar
+  - bcftools
+  - samtools
+  - tabix
+  - pbgzip
+  - bwa
+  
+  
